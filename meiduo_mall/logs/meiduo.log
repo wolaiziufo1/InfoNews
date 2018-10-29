@@ -432,3 +432,758 @@ WARNING 2018-10-25 18:48:36,597 basehttp 124 "POST /authorizations/ HTTP/1.1" 40
 INFO 2018-10-25 18:48:44,592 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 216
 INFO 2018-10-25 19:18:11,210 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
 INFO 2018-10-25 19:18:11,269 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 216
+INFO 2018-10-25 21:50:51,419 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 200
+WARNING 2018-10-25 21:51:22,442 base 152 Not Found: /oauth/qq/user/
+WARNING 2018-10-25 21:51:22,443 basehttp 124 "GET /oauth/qq/user/?code=B286117EA256D0D0BF7F8F9874A6AE24 HTTP/1.1" 404 3091
+INFO 2018-10-25 21:52:01,921 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-25 21:52:01,969 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 216
+INFO 2018-10-26 08:17:31,125 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-26 08:17:31,267 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 216
+INFO 2018-10-26 18:01:15,646 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+WARNING 2018-10-26 18:01:47,509 basehttp 124 "GET /oauth/qq/user/?code=3EA62A8057CC4E3A6A727444610CE856 HTTP/1.1" 400 26
+ERROR 2018-10-26 18:03:05,589 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 42, in get
+    access_token = oauth.get_access_token(code)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/QQLoginTool/QQtool.py", line 63, in get_access_token
+    raise Exception('access_token获取失败')
+Exception: access_token获取失败
+ERROR 2018-10-26 18:03:05,728 basehttp 124 "GET /oauth/qq/user/?code=3EA62A8057CC4E3A6A727444610CE856 HTTP/1.1" 500 20328
+INFO 2018-10-26 18:09:04,610 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+INFO 2018-10-26 18:09:33,176 basehttp 124 "GET /oauth/qq/user/?code=FA22272B3D0C0FA1F499B8EBE37CC2A2 HTTP/1.1" 200 16
+WARNING 2018-10-26 18:17:47,631 base 152 Not Found: /usernames/wolaiziufo/count/
+WARNING 2018-10-26 18:17:47,632 basehttp 124 "GET /usernames/wolaiziufo/count/ HTTP/1.1" 404 3026
+WARNING 2018-10-26 18:18:04,458 base 152 Not Found: /mobiles/13111111111/count/
+WARNING 2018-10-26 18:18:04,459 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 404 3023
+WARNING 2018-10-26 18:18:17,006 base 152 Not Found: /mobiles/13111111111/count/
+WARNING 2018-10-26 18:18:17,007 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 404 3023
+WARNING 2018-10-26 18:18:18,385 base 152 Not Found: /mobiles/13111111111/count/
+WARNING 2018-10-26 18:18:18,388 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 404 3023
+INFO 2018-10-26 18:18:18,890 basehttp 124 "GET /sms_codes/13111111111/ HTTP/1.1" 200 16
+WARNING 2018-10-26 18:18:49,091 base 152 Not Found: /usernames/wolaiziufo/count/
+WARNING 2018-10-26 18:18:49,095 base 152 Not Found: /mobiles/13111111111/count/
+WARNING 2018-10-26 18:18:49,098 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 404 3023
+INFO 2018-10-26 18:18:49,099 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+WARNING 2018-10-26 18:18:49,099 basehttp 124 "GET /usernames/wolaiziufo/count/ HTTP/1.1" 404 3026
+WARNING 2018-10-26 18:18:49,120 basehttp 124 "POST /users/ HTTP/1.1" 400 113
+WARNING 2018-10-26 18:18:55,500 base 152 Not Found: /usernames/wolaiziufo/count/
+WARNING 2018-10-26 18:18:55,508 basehttp 124 "GET /usernames/wolaiziufo/count/ HTTP/1.1" 404 3026
+WARNING 2018-10-26 18:18:55,514 base 152 Not Found: /mobiles/13111111111/count/
+WARNING 2018-10-26 18:18:55,516 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 404 3023
+WARNING 2018-10-26 18:18:55,527 basehttp 124 "POST /users/ HTTP/1.1" 400 113
+WARNING 2018-10-26 18:19:00,218 base 152 Not Found: /usernames/wolaiziufo/count/
+WARNING 2018-10-26 18:19:00,263 base 152 Not Found: /mobiles/13111111111/count/
+WARNING 2018-10-26 18:19:00,266 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 404 3023
+WARNING 2018-10-26 18:19:00,268 basehttp 124 "GET /usernames/wolaiziufo/count/ HTTP/1.1" 404 3026
+WARNING 2018-10-26 18:19:00,276 basehttp 124 "POST /users/ HTTP/1.1" 400 113
+WARNING 2018-10-26 18:19:01,076 base 152 Not Found: /usernames/wolaiziufo/count/
+WARNING 2018-10-26 18:19:01,079 base 152 Not Found: /mobiles/13111111111/count/
+WARNING 2018-10-26 18:19:01,084 basehttp 124 "GET /usernames/wolaiziufo/count/ HTTP/1.1" 404 3026
+WARNING 2018-10-26 18:19:01,085 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 404 3023
+WARNING 2018-10-26 18:19:01,097 basehttp 124 "POST /users/ HTTP/1.1" 400 113
+WARNING 2018-10-26 18:19:45,629 base 152 Not Found: /mobiles/13222222222/count/
+WARNING 2018-10-26 18:19:45,630 basehttp 124 "GET /mobiles/13222222222/count/ HTTP/1.1" 404 3023
+WARNING 2018-10-26 18:19:45,762 base 152 Not Found: /mobiles/13222222222/count/
+WARNING 2018-10-26 18:19:45,764 basehttp 124 "GET /mobiles/13222222222/count/ HTTP/1.1" 404 3023
+INFO 2018-10-26 18:19:45,764 basehttp 124 "GET /sms_codes/13222222222/ HTTP/1.1" 200 16
+WARNING 2018-10-26 18:20:09,071 base 152 Not Found: /usernames/wolaiziufo/count/
+WARNING 2018-10-26 18:20:09,076 base 152 Not Found: /mobiles/13222222222/count/
+WARNING 2018-10-26 18:20:09,076 basehttp 124 "GET /usernames/wolaiziufo/count/ HTTP/1.1" 404 3026
+WARNING 2018-10-26 18:20:09,083 basehttp 124 "GET /mobiles/13222222222/count/ HTTP/1.1" 404 3023
+WARNING 2018-10-26 18:20:09,095 basehttp 124 "POST /users/ HTTP/1.1" 400 123
+WARNING 2018-10-26 18:20:15,837 base 152 Not Found: /usernames/wolaiziufo/count/
+WARNING 2018-10-26 18:20:15,841 base 152 Not Found: /mobiles/13222222222/count/
+WARNING 2018-10-26 18:20:15,848 basehttp 124 "GET /mobiles/13222222222/count/ HTTP/1.1" 404 3023
+WARNING 2018-10-26 18:20:15,850 basehttp 124 "GET /usernames/wolaiziufo/count/ HTTP/1.1" 404 3026
+WARNING 2018-10-26 18:20:15,860 basehttp 124 "POST /users/ HTTP/1.1" 400 59
+WARNING 2018-10-26 18:20:22,911 base 152 Not Found: /usernames/wolaiziufo1/count/
+WARNING 2018-10-26 18:20:22,911 basehttp 124 "GET /usernames/wolaiziufo1/count/ HTTP/1.1" 404 3029
+WARNING 2018-10-26 18:20:23,053 base 152 Not Found: /usernames/wolaiziufo1/count/
+WARNING 2018-10-26 18:20:23,058 base 152 Not Found: /mobiles/13222222222/count/
+WARNING 2018-10-26 18:20:23,060 basehttp 124 "GET /usernames/wolaiziufo1/count/ HTTP/1.1" 404 3029
+WARNING 2018-10-26 18:20:23,061 basehttp 124 "GET /mobiles/13222222222/count/ HTTP/1.1" 404 3023
+ERROR 2018-10-26 18:20:23,066 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/users/views.py", line 36, in post
+    ser.is_valid()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/users/serializers.py", line 68, in validate
+    if attrs['access_token'] != real_sms_code:
+KeyError: 'access_token'
+ERROR 2018-10-26 18:20:23,151 basehttp 124 "POST /users/ HTTP/1.1" 500 20429
+WARNING 2018-10-26 18:20:25,104 base 152 Not Found: /usernames/wolaiziufo1/count/
+WARNING 2018-10-26 18:20:25,105 basehttp 124 "GET /usernames/wolaiziufo1/count/ HTTP/1.1" 404 3029
+WARNING 2018-10-26 18:20:25,108 base 152 Not Found: /mobiles/13222222222/count/
+WARNING 2018-10-26 18:20:25,111 basehttp 124 "GET /mobiles/13222222222/count/ HTTP/1.1" 404 3023
+ERROR 2018-10-26 18:20:25,115 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/users/views.py", line 36, in post
+    ser.is_valid()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/users/serializers.py", line 68, in validate
+    if attrs['access_token'] != real_sms_code:
+KeyError: 'access_token'
+ERROR 2018-10-26 18:20:25,129 basehttp 124 "POST /users/ HTTP/1.1" 500 20429
+WARNING 2018-10-26 18:20:37,225 base 152 Not Found: /usernames/wolaiziufo1/count/
+WARNING 2018-10-26 18:20:37,226 basehttp 124 "GET /usernames/wolaiziufo1/count/ HTTP/1.1" 404 3029
+WARNING 2018-10-26 18:20:37,231 base 152 Not Found: /mobiles/13222222222/count/
+WARNING 2018-10-26 18:20:37,234 basehttp 124 "GET /mobiles/13222222222/count/ HTTP/1.1" 404 3023
+ERROR 2018-10-26 18:20:37,239 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/users/views.py", line 36, in post
+    ser.is_valid()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/users/serializers.py", line 68, in validate
+    if attrs['access_token'] != real_sms_code:
+KeyError: 'access_token'
+ERROR 2018-10-26 18:20:37,260 basehttp 124 "POST /users/ HTTP/1.1" 500 20430
+INFO 2018-10-26 18:39:58,777 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-26 18:39:58,830 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 216
+WARNING 2018-10-26 18:40:12,700 base 152 Not Found: /usernames/wolaiziufo1/count/
+WARNING 2018-10-26 18:40:12,703 basehttp 124 "GET /usernames/wolaiziufo1/count/ HTTP/1.1" 404 3029
+WARNING 2018-10-26 18:40:23,422 base 152 Not Found: /mobiles/13222222222/count/
+WARNING 2018-10-26 18:40:23,423 basehttp 124 "GET /mobiles/13222222222/count/ HTTP/1.1" 404 3023
+WARNING 2018-10-26 18:40:23,546 base 152 Not Found: /mobiles/13222222222/count/
+WARNING 2018-10-26 18:40:23,548 basehttp 124 "GET /mobiles/13222222222/count/ HTTP/1.1" 404 3023
+INFO 2018-10-26 18:40:23,594 basehttp 124 "GET /sms_codes/13222222222/ HTTP/1.1" 200 16
+WARNING 2018-10-26 18:40:41,165 base 152 Not Found: /usernames/wolaiziufo1/count/
+WARNING 2018-10-26 18:40:41,170 base 152 Not Found: /mobiles/13222222222/count/
+WARNING 2018-10-26 18:40:41,171 basehttp 124 "GET /mobiles/13222222222/count/ HTTP/1.1" 404 3023
+INFO 2018-10-26 18:40:41,171 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+WARNING 2018-10-26 18:40:41,171 basehttp 124 "GET /usernames/wolaiziufo1/count/ HTTP/1.1" 404 3029
+ERROR 2018-10-26 18:40:41,186 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/users/views.py", line 36, in post
+    ser.is_valid()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/users/serializers.py", line 68, in validate
+    if attrs['access_token'] != real_sms_code:
+KeyError: 'access_token'
+ERROR 2018-10-26 18:40:41,220 basehttp 124 "POST /users/ HTTP/1.1" 500 20429
+INFO 2018-10-26 18:41:03,991 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+INFO 2018-10-26 18:41:23,774 basehttp 124 "GET /oauth/qq/user/?code=BFBF070A1FC2B6AB3240E326AC0D5D10 HTTP/1.1" 200 51
+INFO 2018-10-26 18:41:33,451 basehttp 124 "GET /sms_codes/13111111111/ HTTP/1.1" 200 16
+INFO 2018-10-26 18:41:54,960 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-10-26 18:41:54,963 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+WARNING 2018-10-26 18:42:04,141 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+WARNING 2018-10-26 18:44:58,567 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+ERROR 2018-10-26 18:45:10,898 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 42, in get
+    access_token = oauth.get_access_token(code)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/QQLoginTool/QQtool.py", line 63, in get_access_token
+    raise Exception('access_token获取失败')
+Exception: access_token获取失败
+ERROR 2018-10-26 18:45:10,939 basehttp 124 "GET /oauth/qq/user/?code=BFBF070A1FC2B6AB3240E326AC0D5D10 HTTP/1.1" 500 20295
+INFO 2018-10-26 18:45:21,249 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+ERROR 2018-10-26 18:45:40,756 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 47, in get
+    qq_user = OAuthQQUser.objects.get(openid=openid)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+oauth.models.DoesNotExist: OAuthQQUser matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 53, in get
+    open_id=tjs.dumps({'openid':openid}).decode()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/itsdangerous.py", line 742, in dumps
+    return signer.sign(self.dump_payload(header, obj))
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/itsdangerous.py", line 353, in sign
+    return value + want_bytes(self.sep) + self.get_signature(value)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/itsdangerous.py", line 347, in get_signature
+    key = self.derive_key()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/itsdangerous.py", line 333, in derive_key
+    return self.digest_method(salt + b'signer' +
+TypeError: unsupported operand type(s) for +: 'int' and 'bytes'
+ERROR 2018-10-26 18:45:41,075 basehttp 124 "GET /oauth/qq/user/?code=8F3FBFE5CA4CB47F0620CAF326EFEDFA HTTP/1.1" 500 21480
+INFO 2018-10-26 18:46:52,853 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+ERROR 2018-10-26 18:47:12,441 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 47, in get
+    qq_user = OAuthQQUser.objects.get(openid=openid)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+oauth.models.DoesNotExist: OAuthQQUser matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 53, in get
+    open_id=tjs.dumps({'openid':openid}).decode()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/itsdangerous.py", line 742, in dumps
+    return signer.sign(self.dump_payload(header, obj))
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/itsdangerous.py", line 353, in sign
+    return value + want_bytes(self.sep) + self.get_signature(value)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/itsdangerous.py", line 347, in get_signature
+    key = self.derive_key()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/itsdangerous.py", line 333, in derive_key
+    return self.digest_method(salt + b'signer' +
+TypeError: unsupported operand type(s) for +: 'int' and 'bytes'
+ERROR 2018-10-26 18:47:12,492 basehttp 124 "GET /oauth/qq/user/?code=9E7627BAFDC3C115143BEE3757B5637D HTTP/1.1" 500 21480
+INFO 2018-10-26 18:50:58,450 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+INFO 2018-10-26 18:51:36,306 basehttp 124 "GET /oauth/qq/user/?code=F0BB50162D91BA9C0B59D77C922665BA HTTP/1.1" 200 190
+INFO 2018-10-26 18:51:55,129 basehttp 124 "GET /sms_codes/13111111111/ HTTP/1.1" 200 16
+INFO 2018-10-26 18:52:09,784 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-10-26 18:52:09,788 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+WARNING 2018-10-26 18:53:27,632 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+INFO 2018-10-26 18:53:43,357 basehttp 124 "GET /sms_codes/13222222222/ HTTP/1.1" 200 16
+WARNING 2018-10-26 18:53:57,304 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+INFO 2018-10-26 21:38:51,172 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+INFO 2018-10-26 21:39:20,060 basehttp 124 "GET /oauth/qq/user/?code=FDBB53FC0B362E0CBE1A7A57B878131B HTTP/1.1" 200 190
+INFO 2018-10-26 21:39:30,214 basehttp 124 "GET /sms_codes/13111111111/ HTTP/1.1" 200 16
+INFO 2018-10-26 21:39:54,111 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-10-26 21:39:54,115 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+WARNING 2018-10-26 21:39:55,967 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+INFO 2018-10-28 15:21:02,925 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-28 15:21:03,319 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 216
+INFO 2018-10-28 15:21:07,801 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-28 15:21:07,977 basehttp 124 "GET /user/ HTTP/1.1" 200 344
+INFO 2018-10-28 15:21:08,000 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-28 15:21:08,011 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 15:21:08,013 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3151
+INFO 2018-10-28 15:22:53,042 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+INFO 2018-10-28 15:25:30,818 basehttp 124 "GET /oauth/qq/user/?code=CDDAB127F36A807EA7D0AFF28B835B6F HTTP/1.1" 200 190
+INFO 2018-10-28 15:25:41,761 basehttp 124 "GET /sms_codes/13111111111/ HTTP/1.1" 200 16
+INFO 2018-10-28 15:26:12,607 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-10-28 15:26:12,652 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+WARNING 2018-10-28 15:26:14,935 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+INFO 2018-10-28 15:44:35,309 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+INFO 2018-10-28 15:44:46,733 basehttp 124 "GET /oauth/qq/user/?code=AF0C170CCE17F4836FE96091741E9BE3 HTTP/1.1" 200 190
+INFO 2018-10-28 15:44:56,630 basehttp 124 "GET /sms_codes/13111111111/ HTTP/1.1" 200 16
+INFO 2018-10-28 15:45:13,655 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-10-28 15:45:13,660 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+WARNING 2018-10-28 15:45:14,242 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+WARNING 2018-10-28 15:45:14,462 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+WARNING 2018-10-28 15:45:14,644 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+INFO 2018-10-28 15:46:09,044 basehttp 124 "GET /sms_codes/13111111111/ HTTP/1.1" 200 16
+WARNING 2018-10-28 15:46:10,602 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+INFO 2018-10-28 15:46:21,267 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+INFO 2018-10-28 15:46:31,335 basehttp 124 "GET /oauth/qq/user/?code=656F1CDB539D94999F62F05FD9AF92A0 HTTP/1.1" 200 190
+WARNING 2018-10-28 15:46:40,387 basehttp 124 "GET /sms_codes/13111111111/ HTTP/1.1" 400 32
+INFO 2018-10-28 15:49:45,674 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+INFO 2018-10-28 15:50:01,673 basehttp 124 "GET /oauth/qq/user/?code=4CDC1058172C943885102C584358C1B9 HTTP/1.1" 200 190
+INFO 2018-10-28 15:50:12,558 basehttp 124 "GET /sms_codes/13111111111/ HTTP/1.1" 200 16
+INFO 2018-10-28 15:50:30,669 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-10-28 15:50:30,673 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 405 46
+INFO 2018-10-28 15:54:15,838 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+INFO 2018-10-28 15:54:26,002 basehttp 124 "GET /oauth/qq/user/?code=AD6A43AD44F1BA3899339F00EF6FC763 HTTP/1.1" 200 190
+INFO 2018-10-28 15:54:34,267 basehttp 124 "GET /sms_codes/13111111111/ HTTP/1.1" 200 16
+WARNING 2018-10-28 15:54:49,223 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 95
+INFO 2018-10-28 15:56:09,388 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+INFO 2018-10-28 15:56:17,392 basehttp 124 "GET /oauth/qq/user/?code=9F3719293DB9BAD928909A660FF59358 HTTP/1.1" 200 190
+INFO 2018-10-28 15:56:29,985 basehttp 124 "GET /sms_codes/13111111111/ HTTP/1.1" 200 16
+INFO 2018-10-28 15:56:42,208 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-10-28 15:56:42,219 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 95
+INFO 2018-10-28 15:59:03,514 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+INFO 2018-10-28 16:00:10,557 basehttp 124 "GET /oauth/qq/user/?code=64477FEE85252B2EFB20E12A6510F515 HTTP/1.1" 200 190
+INFO 2018-10-28 16:00:23,071 basehttp 124 "GET /sms_codes/13111111111/ HTTP/1.1" 200 16
+INFO 2018-10-28 16:00:35,869 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-10-28 16:00:35,891 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 95
+WARNING 2018-10-28 16:04:46,926 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 95
+ERROR 2018-10-28 16:04:54,894 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 46, in get
+    access_token = oauth.get_access_token(code)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/QQLoginTool/QQtool.py", line 63, in get_access_token
+    raise Exception('access_token获取失败')
+Exception: access_token获取失败
+ERROR 2018-10-28 16:04:55,178 basehttp 124 "GET /oauth/qq/user/?code=64477FEE85252B2EFB20E12A6510F515 HTTP/1.1" 500 22090
+INFO 2018-10-28 16:05:08,257 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 175
+INFO 2018-10-28 16:05:35,045 basehttp 124 "GET /oauth/qq/user/?code=808BA29C6D985ADB8987A6E4AEF23822 HTTP/1.1" 200 190
+INFO 2018-10-28 16:05:47,877 basehttp 124 "GET /sms_codes/13111111111/ HTTP/1.1" 200 16
+WARNING 2018-10-28 16:06:00,088 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 95
+WARNING 2018-10-28 16:07:01,465 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 95
+INFO 2018-10-28 19:40:47,861 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-28 19:40:47,925 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 216
+INFO 2018-10-28 19:40:51,131 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-28 19:40:51,207 basehttp 124 "GET /user/ HTTP/1.1" 200 344
+INFO 2018-10-28 19:40:51,217 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-28 19:40:51,226 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 19:40:51,228 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3308
+INFO 2018-10-28 19:41:03,327 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+ERROR 2018-10-28 19:41:03,675 exception 135 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/mixins.py", line 80, in perform_update
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/serializers.py", line 209, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/users/serializers.py", line 112, in update
+    send_mail('biaoti','neirong',settings.EMAIL_FROM,[validated_data['email'],])
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/mail/__init__.py", line 62, in send_mail
+    return mail.send()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/mail/message.py", line 348, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/mail/backends/smtp.py", line 111, in send_messages
+    sent = self._send(message)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/mail/backends/smtp.py", line 127, in _send
+    self.connection.sendmail(from_email, recipients, message.as_bytes(linesep='\r\n'))
+  File "/usr/lib/python3.5/smtplib.py", line 862, in sendmail
+    raise SMTPSenderRefused(code, resp, from_addr)
+smtplib.SMTPSenderRefused: (553, b'Mail from must equal authorized user', 'request-account@amazonaws.cn')
+ERROR 2018-10-28 19:41:03,747 basehttp 124 "PUT /emails/ HTTP/1.1" 500 21824
+INFO 2018-10-28 19:54:12,036 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+ERROR 2018-10-28 19:54:12,312 exception 135 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/mixins.py", line 80, in perform_update
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/serializers.py", line 209, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/users/serializers.py", line 112, in update
+    send_mail('biaoti','neirong',settings.EMAIL_FROM,[validated_data['email'],])
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/mail/__init__.py", line 62, in send_mail
+    return mail.send()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/mail/message.py", line 348, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/mail/backends/smtp.py", line 111, in send_messages
+    sent = self._send(message)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/mail/backends/smtp.py", line 127, in _send
+    self.connection.sendmail(from_email, recipients, message.as_bytes(linesep='\r\n'))
+  File "/usr/lib/python3.5/smtplib.py", line 862, in sendmail
+    raise SMTPSenderRefused(code, resp, from_addr)
+smtplib.SMTPSenderRefused: (553, b'Mail from must equal authorized user', 'request-account@amazonaws.cn')
+ERROR 2018-10-28 19:54:12,381 basehttp 124 "PUT /emails/ HTTP/1.1" 500 21823
+ERROR 2018-10-28 19:54:22,271 exception 135 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/mixins.py", line 80, in perform_update
+    serializer.save()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/serializers.py", line 209, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/users/serializers.py", line 112, in update
+    send_mail('biaoti','neirong',settings.EMAIL_FROM,[validated_data['email'],])
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/mail/__init__.py", line 62, in send_mail
+    return mail.send()
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/mail/message.py", line 348, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/mail/backends/smtp.py", line 111, in send_messages
+    sent = self._send(message)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/mail/backends/smtp.py", line 127, in _send
+    self.connection.sendmail(from_email, recipients, message.as_bytes(linesep='\r\n'))
+  File "/usr/lib/python3.5/smtplib.py", line 862, in sendmail
+    raise SMTPSenderRefused(code, resp, from_addr)
+smtplib.SMTPSenderRefused: (553, b'Mail from must equal authorized user', 'request-account@amazonaws.cn')
+ERROR 2018-10-28 19:54:22,342 basehttp 124 "PUT /emails/ HTTP/1.1" 500 21823
+INFO 2018-10-28 19:54:52,828 basehttp 124 "PUT /emails/ HTTP/1.1" 200 33
+INFO 2018-10-28 20:26:47,248 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-28 20:26:47,316 basehttp 124 "GET /user/ HTTP/1.1" 200 365
+INFO 2018-10-28 20:26:47,326 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-28 20:26:47,339 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 20:26:47,340 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3308
+INFO 2018-10-28 20:26:58,689 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-10-28 20:26:58,752 basehttp 124 "PUT /emails/ HTTP/1.1" 200 33
+WARNING 2018-10-28 20:30:40,891 base 152 Not Found: /emails/verification/
+WARNING 2018-10-28 20:30:40,892 basehttp 124 "GET /emails/verification/?token=eyJpYXQiOjE1NDA3Mjk2MTgsImV4cCI6MTU0MDcyOTkxOCwiYWxnIjoiSFMyNTYifQ.eyJ1c2VybmFtZSI6IndvbGFpeml1Zm8ifQ.rIKSSp9rS0PPKGfTaiBxk91VZT4oBakBIGTHWHXOsOY HTTP/1.1" 404 3469
+INFO 2018-10-28 20:30:57,238 basehttp 124 "GET /user/ HTTP/1.1" 200 365
+WARNING 2018-10-28 20:30:57,252 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 20:30:57,254 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3308
+INFO 2018-10-28 20:31:06,840 basehttp 124 "PUT /emails/ HTTP/1.1" 200 33
+WARNING 2018-10-28 20:31:40,117 base 152 Not Found: /emails/verification/
+WARNING 2018-10-28 20:31:40,117 basehttp 124 "GET /emails/verification/?token=eyJpYXQiOjE1NDA3Mjk4NjYsImV4cCI6MTU0MDczMDE2NiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VybmFtZSI6IndvbGFpeml1Zm8ifQ.ridMcRoMrVgWWUz1qv-aw4avb3TzB0boK3K1QUPa_wo HTTP/1.1" 404 3469
+INFO 2018-10-28 20:33:01,668 basehttp 124 "GET /user/ HTTP/1.1" 200 386
+WARNING 2018-10-28 20:33:01,695 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 20:33:01,695 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3308
+INFO 2018-10-28 20:33:03,739 basehttp 124 "PUT /emails/ HTTP/1.1" 200 33
+WARNING 2018-10-28 20:33:14,231 base 152 Not Found: /emails/verification/
+WARNING 2018-10-28 20:33:14,231 basehttp 124 "GET /emails/verification/?token=eyJpYXQiOjE1NDA3Mjk5ODMsImV4cCI6MTU0MDczMDI4MywiYWxnIjoiSFMyNTYifQ.eyJ1c2VybmFtZSI6IndvbGFpeml1Zm8ifQ.LnNF0ZVrcebe9REt8GEbceLPIfT5hYaTZmxnDmUDdNo HTTP/1.1" 404 3469
+INFO 2018-10-28 20:50:43,999 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-28 20:50:44,061 basehttp 124 "GET /user/ HTTP/1.1" 200 386
+INFO 2018-10-28 20:50:44,071 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-28 20:50:44,082 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 20:50:44,083 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3308
+INFO 2018-10-28 20:50:45,761 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-10-28 20:50:45,823 basehttp 124 "PUT /emails/ HTTP/1.1" 200 33
+WARNING 2018-10-28 20:50:56,915 base 152 Not Found: /emails/verification/
+WARNING 2018-10-28 20:50:56,916 basehttp 124 "GET /emails/verification/?token=eyJleHAiOjE1NDA3MzEzNDUsImlhdCI6MTU0MDczMTA0NSwiYWxnIjoiSFMyNTYifQ.eyJ1c2VybmFtZSI6IndvbGFpeml1Zm8ifQ.gRZ8aEzwKIW5ENykaj1Blsw2OPjVEJsDyQK7wYKxWR4 HTTP/1.1" 404 3469
+INFO 2018-10-28 20:51:29,922 basehttp 124 "GET /user/ HTTP/1.1" 200 386
+WARNING 2018-10-28 20:51:29,944 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 20:51:29,946 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3308
+INFO 2018-10-28 20:51:32,840 basehttp 124 "PUT /emails/ HTTP/1.1" 200 33
+WARNING 2018-10-28 20:51:42,932 base 152 Not Found: /emails/verification/
+WARNING 2018-10-28 20:51:42,933 basehttp 124 "GET /emails/verification/?token=eyJleHAiOjE1NDA3MzEzOTIsImFsZyI6IkhTMjU2IiwiaWF0IjoxNTQwNzMxMDkyfQ.eyJ1c2VybmFtZSI6IndvbGFpeml1Zm8ifQ.cH2ALGVGM7IVwsmr5ILZBjUmI4uexJ8a6VCx4r2hjTc HTTP/1.1" 404 3469
+INFO 2018-10-28 20:53:38,220 basehttp 124 "GET /user/ HTTP/1.1" 200 386
+WARNING 2018-10-28 20:53:38,234 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 20:53:38,236 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3478
+INFO 2018-10-28 20:53:39,769 basehttp 124 "PUT /emails/ HTTP/1.1" 200 33
+ERROR 2018-10-28 20:53:50,787 exception 135 Internal Server Error: /emails/verification/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/users/views.py", line 71, in get
+    username = data.get('username')
+AttributeError: 'str' object has no attribute 'get'
+ERROR 2018-10-28 20:53:50,805 basehttp 124 "GET /emails/verification/?token=eyJhbGciOiJIUzI1NiIsImV4cCI6MTU0MDczMTUxOSwiaWF0IjoxNTQwNzMxMjE5fQ.eyJ1c2VybmFtZSI6IndvbGFpeml1Zm8ifQ.1dC88Sh7oSzFDxic94rvsHupRftT7htL60zkRPGD1eA HTTP/1.1" 500 20627
+INFO 2018-10-28 20:55:43,049 basehttp 124 "GET /user/ HTTP/1.1" 200 386
+WARNING 2018-10-28 20:55:43,077 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 20:55:43,077 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3478
+INFO 2018-10-28 20:55:44,646 basehttp 124 "PUT /emails/ HTTP/1.1" 200 33
+ERROR 2018-10-28 20:56:23,106 exception 135 Internal Server Error: /emails/verification/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/http/response.py", line 54, in __init__
+    self.status_code = int(status)
+ValueError: invalid literal for int() with base 10: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/users/views.py", line 76, in get
+    return Response('username', 'email', 'email_activate')
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/response.py", line 32, in __init__
+    super(Response, self).__init__(None, status=status)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/template/response.py", line 37, in __init__
+    super(SimpleTemplateResponse, self).__init__('', content_type, status, charset=charset)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/http/response.py", line 301, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/http/response.py", line 56, in __init__
+    raise TypeError('HTTP status code must be an integer.')
+TypeError: HTTP status code must be an integer.
+ERROR 2018-10-28 20:56:23,183 basehttp 124 "GET /emails/verification/?token=eyJleHAiOjE1NDA3MzE2NDQsImlhdCI6MTU0MDczMTM0NCwiYWxnIjoiSFMyNTYifQ.eyJ1c2VybmFtZSI6IndvbGFpeml1Zm8ifQ.9HLYZbo2grYw3OV2rgYjRyL3XKiRdeMbUBlMe2mjAWM HTTP/1.1" 500 21690
+INFO 2018-10-28 20:58:06,739 basehttp 124 "GET /user/ HTTP/1.1" 200 386
+WARNING 2018-10-28 20:58:06,761 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 20:58:06,762 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3478
+INFO 2018-10-28 20:58:09,291 basehttp 124 "PUT /emails/ HTTP/1.1" 200 33
+INFO 2018-10-28 20:58:20,786 basehttp 124 "GET /emails/verification/?token=eyJhbGciOiJIUzI1NiIsImlhdCI6MTU0MDczMTQ4OSwiZXhwIjoxNTQwNzMxNzg5fQ.eyJ1c2VybmFtZSI6IndvbGFpeml1Zm8ifQ.bTeZczcaw6gPHTdFppgLOCtQI_u7Ni6Y_17F295ihZw HTTP/1.1" 200 386
+INFO 2018-10-29 19:09:08,478 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-29 19:09:08,763 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 244
+INFO 2018-10-29 19:09:12,902 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-29 19:09:13,023 basehttp 124 "GET /user/ HTTP/1.1" 200 386
+INFO 2018-10-29 19:09:13,091 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-29 19:09:13,100 base 152 Not Found: /browse_histories/
+WARNING 2018-10-29 19:09:13,101 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3808
+INFO 2018-10-29 19:09:18,221 basehttp 124 "GET /user/ HTTP/1.1" 200 386
+WARNING 2018-10-29 19:09:18,238 base 152 Not Found: /browse_histories/
+WARNING 2018-10-29 19:09:18,238 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3808
+INFO 2018-10-29 19:09:20,061 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+ERROR 2018-10-29 19:09:20,068 exception 135 Internal Server Error: /areas/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/generics.py", line 201, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/mixins.py", line 40, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/areas/views.py", line 17, in get_queryset
+    pk = self.kwargs['pk']
+KeyError: 'pk'
+WARNING 2018-10-29 19:09:20,081 base 152 Not Found: /addresses/
+WARNING 2018-10-29 19:09:20,196 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3787
+ERROR 2018-10-29 19:09:20,220 basehttp 124 "GET /areas/ HTTP/1.1" 500 20381
+ERROR 2018-10-29 19:36:56,027 exception 135 Internal Server Error: /areas/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework/generics.py", line 201, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework_extensions/cache/decorators.py", line 48, in inner
+    kwargs=kwargs,
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework_extensions/cache/decorators.py", line 63, in process_cache_response
+    kwargs=kwargs
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework_extensions/cache/decorators.py", line 94, in calculate_key
+    kwargs=kwargs,
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework_extensions/key_constructor/constructors.py", line 30, in __call__
+    return self.get_key(**kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework_extensions/key_constructor/constructors.py", line 50, in get_key
+    kwargs=kwargs
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework_extensions/key_constructor/constructors.py", line 74, in _get_key
+    self.get_data_from_bits(**_kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework_extensions/key_constructor/constructors.py", line 90, in get_data_from_bits
+    result_dict[bit_name] = bit_instance.get_data(params=params, **kwargs)
+  File "/home/python/.virtualenvs/meiduo17/lib/python3.5/site-packages/rest_framework_extensions/key_constructor/bits.py", line 198, in get_data
+    queryset = view_instance.filter_queryset(view_instance.get_queryset())
+  File "/home/python/Documents/meiduo/InfoNews/meiduo_mall/meiduo_mall/apps/areas/views.py", line 21, in get_queryset
+    queryset = Area.objects.filter(parent=None)
+KeyError: 'pk'
+INFO 2018-10-29 19:36:56,029 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-10-29 19:36:56,071 base 152 Not Found: /addresses/
+WARNING 2018-10-29 19:36:56,078 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3787
+ERROR 2018-10-29 19:36:56,115 basehttp 124 "GET /areas/ HTTP/1.1" 500 21881
+INFO 2018-10-29 19:38:15,032 basehttp 124 "GET /areas/ HTTP/1.1" 200 1680
+ERROR 2018-10-29 19:38:15,037 exceptions 25 [<areas.views.AddressView object at 0x7f863c1a6f98>] (1146, "Table 'meiduo_mall.tb_address' doesn't exist")
+ERROR 2018-10-29 19:38:15,038 basehttp 124 "GET /addresses/ HTTP/1.1" 507 35
+INFO 2018-10-29 19:45:00,978 basehttp 124 "GET /areas/ HTTP/1.1" 200 1680
+INFO 2018-10-29 19:45:00,990 basehttp 124 "GET /addresses/ HTTP/1.1" 200 2
+INFO 2018-10-29 19:45:08,954 basehttp 124 "GET /areas/120000/ HTTP/1.1" 200 50
+INFO 2018-10-29 19:45:10,748 basehttp 124 "GET /areas/120100/ HTTP/1.1" 200 788
+INFO 2018-10-29 19:45:33,068 basehttp 124 "POST /addresses/ HTTP/1.1" 201 287
+INFO 2018-10-29 19:45:37,469 basehttp 124 "OPTIONS /addresses/1/status/ HTTP/1.1" 200 0
+WARNING 2018-10-29 19:45:37,479 base 152 Not Found: /addresses/1/status/
+WARNING 2018-10-29 19:45:37,480 basehttp 124 "PUT /addresses/1/status/ HTTP/1.1" 404 4152

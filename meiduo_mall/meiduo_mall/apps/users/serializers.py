@@ -1,9 +1,13 @@
 import re
 
+from django.conf import settings
+from django.core.mail import send_mail
 from rest_framework import serializers
 from users.models import User
 from django_redis import get_redis_connection
 from rest_framework_jwt.settings import api_settings
+from itsdangerous import TimedJSONWebSignatureSerializer as TJS
+from celery_tasks.email.tasks import send_email
 
 
 class UserSerializers(serializers.ModelSerializer):
@@ -65,7 +69,7 @@ class UserSerializers(serializers.ModelSerializer):
         # 3.转换数据
         real_sms_code = real_sms_code.decode()
         # 4.比对验证
-        if attrs['sms_code'] != real_sms_code:
+        if attrs['access_token'] != real_sms_code:
             raise serializers.ValidationError('短信错误')
 
         return attrs
@@ -92,3 +96,28 @@ class UserSerializers(serializers.ModelSerializer):
         # 对user对象添加token属性字段
         user.token = token
         return user
+
+
+class UserDeailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'
+
+
+class UserEmailViewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('email',)
+
+    def update(self, instance, validated_data):
+        user = self.context['request'].user
+        # 加密用户信息
+        tjs = TJS(settings.SECRET_KEY,300)
+        token = tjs.dumps({'username':instance.username}).decode()
+        to_email = validated_data['email'] # 发送给谁
+        verify_url = 'http://www.meiduo.site:8080/success_verify_email.html?token=' + token  # 验证连接
+        # 发送邮件
+        send_email.delay(to_email,verify_url)
+        instance.email = validated_data['email']
+        instance.save()
+        return instance
