@@ -16,6 +16,7 @@ class AreaView(CacheResponseMixin,ListAPIView):
     queryset = Area.objects.filter(parent=None)
     serializer_class = AreaSerializer
 
+
 class AreasView(CacheResponseMixin,ListAPIView):
     # 指定查询集,获取所有省的信息
     queryset = Area.objects.filter(parent=None)

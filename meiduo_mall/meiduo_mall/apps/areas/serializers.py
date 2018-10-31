@@ -26,7 +26,7 @@ class AddressSerializer(serializers.ModelSerializer):
         exclude = ('user',)
 
     def create(self, validated_data):
-        print(1111)
+        # print(1111)
         # 获取用户对象
         user = self.context['request'].user
 
@@ -35,3 +35,4 @@ class AddressSerializer(serializers.ModelSerializer):
         user = super().create(validated_data)
 
         return user
+
